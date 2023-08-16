@@ -49,7 +49,7 @@ Make sure you can successfully run the example jupyter notebook: `lab1-example.i
 
 ## Google Colab
 
-Google Colab is a cloud hosted notebook service. It is very similar to Jupyter notebook but you do not need to install it, and you can use it for free.
+Google Colab is a cloud hosted notebook service. It is very similar to Jupyter notebook, but you do not need to install it and you can use it for free.
 The flip side, however, is that the computational resource can be limited sometimes.
 
 Follow instructions at https://colab.research.google.com/ to create new notebooks and play with it. Make sure you can upload `lab1-example.ipynb` and run it in Colab as well.
