@@ -7,7 +7,7 @@ Follow the below instructions to set them up.
 
 ## JupyterLab
 
-We introduce both command-line interface (CLI) and graphical user interface (GUI) to install it, choose the one you are comfortable with.
+We introduce both command-line interface (CLI) and graphical user interface (GUI) to install `jupyterlab`. Choose the one that you are comfortable with.
 
 ### Installing via CLI
 
