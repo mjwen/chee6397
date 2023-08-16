@@ -8,7 +8,7 @@ packages = ["docs"]
 [project]
 name = "chee6397"
 requires-python = ">=3.9"
-authors = [{name = "Mingjian Wen", email = "mjwengroup@gmail.com"}]
+authors = [{name = "Mingjian Wen", email = "mjwen@gmail.com"}]
 dynamic = ["version"]
 dependencies = [
     "jupyter-book",

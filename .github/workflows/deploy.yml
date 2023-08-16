@@ -35,7 +35,7 @@ jobs:
       # Build the book
       - name: Build
         run: |
-          jupyter-book build docs --path-output docs_build
+          jupyter-book build ./ --path-output docs_build
 
       # Push the book's HTML to github-pages
       - name: Deploy
