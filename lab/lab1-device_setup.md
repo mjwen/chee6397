@@ -16,7 +16,7 @@ We introduce both command-line interface (CLI) and graphical user interface (GUI
 Follow https://wengroup.github.io/group_manual/computing/conda.html to install `conda`. Make sure you install Python version 3.10. Then install `jupyterlab` by running the below commands in your `terminal` app:
 
 ```shell
-conda install -c conda-forge jupyter
+conda install -c conda-forge jupyterlab
 ```
 
 To start `jupyterlab`, in your `terminal` app, do
