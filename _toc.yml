@@ -9,3 +9,4 @@ parts:
     chapters:
       - file: lab/lab1-device_setup.md
       - file: lab/lab1-example.ipynb
+      - file: lab/lab2-Python_intro.ipynb
