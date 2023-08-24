@@ -1,7 +1,7 @@
 # Lab 1: Setting up Your Laptop
 
 We will use Python for all our coding examples, lab demonstrations, and homeworks.
-There are multiple ways to write and run a Python code. We will mainly use [JypyterLab](https://jupyter.org) (Jupyter Notebook) and [Google Colaboratory](https://colab.research.google.com).
+There are multiple ways to write and run a Python code. We will mainly use [JupyterLab](https://jupyter.org) (Jupyter Notebook) and [Google Colaboratory](https://colab.research.google.com).
 
 Follow the below instructions to set them up.
 
