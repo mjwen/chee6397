@@ -364,6 +364,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-help">Getting help</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shorcuts">Shorcuts</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#show-available-objects">Show available objects</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#get-help-on-a-specific-module-class-function-object">get <code class="docutils literal notranslate"><span class="pre">help</span></code> on a specific module, class, function, object …</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#docs-on-the-fly">Docs on the fly</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-types">Data types</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list">List</a></li>
@@ -398,6 +405,138 @@ document.write(`
 <li><p>Classes</p></li>
 <li><p>Basic third-party packages for data science: numpy, pandas, and matplotlib (seaborn)</p></li>
 </ul>
+<section id="getting-help">
+<h2>Getting help<a class="headerlink" href="#getting-help" title="Permalink to this heading">#</a></h2>
+<section id="shorcuts">
+<h3>Shorcuts<a class="headerlink" href="#shorcuts" title="Permalink to this heading">#</a></h3>
+<p>Menu bar: <code class="docutils literal notranslate"><span class="pre">Help</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">Keyboard</span> <span class="pre">Shortcut</span></code></p>
+<ul class="simple">
+<li><p>e.g. <code class="docutils literal notranslate"><span class="pre">m</span></code> to change to a markdown, <code class="docutils literal notranslate"><span class="pre">y</span></code> to change to code cell, <code class="docutils literal notranslate"><span class="pre">b</span></code> to add a cell below</p></li>
+<li><p>itself has a shortcut</p></li>
+</ul>
+</section>
+<section id="show-available-objects">
+<h3>Show available objects<a class="headerlink" href="#show-available-objects" title="Permalink to this heading">#</a></h3>
+<p>Typing <code class="docutils literal notranslate"><span class="pre">dir()</span></code> and passing in a module, function, method, variable or object shows the possible object, method and function calls available to that object. For example, we can investigate the different functions in the <code class="docutils literal notranslate"><span class="pre">itertools</span></code> module, which is part of Python’s Standard library.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">itertools</span>
+<span class="nb">dir</span><span class="p">(</span><span class="n">itertools</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;__doc__&#39;,
+ &#39;__loader__&#39;,
+ &#39;__name__&#39;,
+ &#39;__package__&#39;,
+ &#39;__spec__&#39;,
+ &#39;_grouper&#39;,
+ &#39;_tee&#39;,
+ &#39;_tee_dataobject&#39;,
+ &#39;accumulate&#39;,
+ &#39;chain&#39;,
+ &#39;combinations&#39;,
+ &#39;combinations_with_replacement&#39;,
+ &#39;compress&#39;,
+ &#39;count&#39;,
+ &#39;cycle&#39;,
+ &#39;dropwhile&#39;,
+ &#39;filterfalse&#39;,
+ &#39;groupby&#39;,
+ &#39;islice&#39;,
+ &#39;pairwise&#39;,
+ &#39;permutations&#39;,
+ &#39;product&#39;,
+ &#39;repeat&#39;,
+ &#39;starmap&#39;,
+ &#39;takewhile&#39;,
+ &#39;tee&#39;,
+ &#39;zip_longest&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="get-help-on-a-specific-module-class-function-object">
+<h3>get <code class="docutils literal notranslate"><span class="pre">help</span></code> on a specific module, class, function, object …<a class="headerlink" href="#get-help-on-a-specific-module-class-function-object" title="Permalink to this heading">#</a></h3>
+<p>Typing <code class="docutils literal notranslate"><span class="pre">help()</span></code> and passing the module, class, function, object as the argument.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">permutations</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on class permutations in module itertools:
+
+class permutations(builtins.object)
+ |  permutations(iterable, r=None)
+ |  
+ |  Return successive r-length permutations of elements in the iterable.
+ |  
+ |  permutations(range(3), 2) --&gt; (0,1), (0,2), (1,0), (1,2), (2,0), (2,1)
+ |  
+ |  Methods defined here:
+ |  
+ |  __getattribute__(self, name, /)
+ |      Return getattr(self, name).
+ |  
+ |  __iter__(self, /)
+ |      Implement iter(self).
+ |  
+ |  __next__(self, /)
+ |      Implement next(self).
+ |  
+ |  __reduce__(...)
+ |      Return state information for pickling.
+ |  
+ |  __setstate__(...)
+ |      Set state information for unpickling.
+ |  
+ |  __sizeof__(...)
+ |      Returns size in memory, in bytes.
+ |  
+ |  ----------------------------------------------------------------------
+ |  Static methods defined here:
+ |  
+ |  __new__(*args, **kwargs) from builtins.type
+ |      Create and return a new object.  See help(type) for accurate signature.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="docs-on-the-fly">
+<h3>Docs on the fly<a class="headerlink" href="#docs-on-the-fly" title="Permalink to this heading">#</a></h3>
+<p>You can get a popup window showing the documentation of a module, class, function, object.
+Type the name of the module, class, function, object, and then press <code class="docutils literal notranslate"><span class="pre">Shift+Tab</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">itertools</span>   <span class="c1"># press `Shift+Tab`</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;module &#39;itertools&#39; (built-in)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">itertools</span><span class="o">.</span><span class="n">permutations</span>  <span class="c1"># press `Shift+Tab`</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>itertools.permutations
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
 <section id="variables">
 <h2>Variables<a class="headerlink" href="#variables" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
@@ -1213,6 +1352,13 @@ c
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-help">Getting help</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shorcuts">Shorcuts</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#show-available-objects">Show available objects</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#get-help-on-a-specific-module-class-function-object">get <code class="docutils literal notranslate"><span class="pre">help</span></code> on a specific module, class, function, object …</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#docs-on-the-fly">Docs on the fly</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-types">Data types</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list">List</a></li>
