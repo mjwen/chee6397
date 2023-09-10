@@ -10,3 +10,4 @@ parts:
       - file: lab/lab1-device_setup.md
       - file: lab/lab1-example.ipynb
       - file: lab/lab2-Python_intro.ipynb
+      - file: lab/lab3-linear_models.ipynb
