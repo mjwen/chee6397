@@ -373,13 +373,16 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#split-the-dataset">Split the dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#split-dataset">Split dataset</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convert-to-numpy-arrays">Convert to numpy arrays</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#split-by-ratio">Split by ratio</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#split-by-number">Split by number</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-random-seed-to-make-it-reproducible">Use random seed to make it reproducible</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#train-validation-test-split">Train, validation, test split</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fit-a-linear-regression-model">Fit a linear regression model</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fit-linear-model">Fit linear model</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression">Linear regression</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-validation">Cross validation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ridge-regression">Ridge regression</a></li>
 </ul>
@@ -820,8 +823,8 @@ Name: Y house price of unit area, Length: 414, dtype: float64
 </section>
 </section>
 </section>
-<section id="split-the-dataset">
-<h2>Split the dataset<a class="headerlink" href="#split-the-dataset" title="Permalink to this heading">#</a></h2>
+<section id="split-dataset">
+<h2>Split dataset<a class="headerlink" href="#split-dataset" title="Permalink to this heading">#</a></h2>
 <section id="convert-to-numpy-arrays">
 <h3>Convert to numpy arrays<a class="headerlink" href="#convert-to-numpy-arrays" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
@@ -941,8 +944,8 @@ X_test.shape = (100, 6)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2.01283333e+03, 1.27000000e+01, 1.87482300e+02, 1.00000000e+00,
-       2.49738800e+01, 1.21529810e+02])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2013.5833333,   35.4      ,  318.5292   ,    9.       ,
+         24.97071  ,  121.54069  ])
 </pre></div>
 </div>
 </div>
@@ -972,8 +975,11 @@ X_test.shape = (42, 6)
 </div>
 </div>
 </section>
-<section id="fit-a-linear-regression-model">
-<h3>Fit a linear regression model<a class="headerlink" href="#fit-a-linear-regression-model" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="fit-linear-model">
+<h2>Fit linear model<a class="headerlink" href="#fit-linear-model" title="Permalink to this heading">#</a></h2>
+<section id="linear-regression">
+<h3>Linear regression<a class="headerlink" href="#linear-regression" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
@@ -1163,13 +1169,16 @@ X_test.shape = (42, 6)
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#split-the-dataset">Split the dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#split-dataset">Split dataset</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convert-to-numpy-arrays">Convert to numpy arrays</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#split-by-ratio">Split by ratio</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#split-by-number">Split by number</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-random-seed-to-make-it-reproducible">Use random seed to make it reproducible</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#train-validation-test-split">Train, validation, test split</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fit-a-linear-regression-model">Fit a linear regression model</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fit-linear-model">Fit linear model</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression">Linear regression</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-validation">Cross validation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ridge-regression">Ridge regression</a></li>
 </ul>
