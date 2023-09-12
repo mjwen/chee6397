@@ -19,6 +19,7 @@ dependencies = [
     "matplotlib",
     "pandas",
     "scikit-learn",
+    "openpyxl",
 ]
 
 [tool.versioningit.vcs]
