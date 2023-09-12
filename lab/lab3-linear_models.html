@@ -808,66 +808,6 @@ Name: Y house price of unit area, Length: 414, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">16</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># save as an excel xlsx file</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">df</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s2">&quot;./data/real_estate_valuation_dataset.xlsx&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/pandas/core/generic.py:2345,</span> in <span class="ni">NDFrame.to_excel</span><span class="nt">(self, excel_writer, sheet_name, na_rep, float_format, columns, header, index, index_label, startrow, startcol, engine, merge_cells, inf_rep, freeze_panes, storage_options, engine_kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2332</span> <span class="kn">from</span> <span class="nn">pandas.io.formats.excel</span> <span class="kn">import</span> <span class="n">ExcelFormatter</span>
-<span class="g g-Whitespace">   </span><span class="mi">2334</span> <span class="n">formatter</span> <span class="o">=</span> <span class="n">ExcelFormatter</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">2335</span>     <span class="n">df</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">2336</span>     <span class="n">na_rep</span><span class="o">=</span><span class="n">na_rep</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2343</span>     <span class="n">inf_rep</span><span class="o">=</span><span class="n">inf_rep</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">2344</span> <span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">2345</span> <span class="n">formatter</span><span class="o">.</span><span class="n">write</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">2346</span>     <span class="n">excel_writer</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">2347</span>     <span class="n">sheet_name</span><span class="o">=</span><span class="n">sheet_name</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">2348</span>     <span class="n">startrow</span><span class="o">=</span><span class="n">startrow</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">2349</span>     <span class="n">startcol</span><span class="o">=</span><span class="n">startcol</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">2350</span>     <span class="n">freeze_panes</span><span class="o">=</span><span class="n">freeze_panes</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">2351</span>     <span class="n">engine</span><span class="o">=</span><span class="n">engine</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">2352</span>     <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">2353</span>     <span class="n">engine_kwargs</span><span class="o">=</span><span class="n">engine_kwargs</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">2354</span> <span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/pandas/io/formats/excel.py:946,</span> in <span class="ni">ExcelFormatter.write</span><span class="nt">(self, writer, sheet_name, startrow, startcol, freeze_panes, engine, storage_options, engine_kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">942</span>     <span class="n">need_save</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="g g-Whitespace">    </span><span class="mi">943</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">944</span>     <span class="c1"># error: Cannot instantiate abstract class &#39;ExcelWriter&#39; with abstract</span>
-<span class="g g-Whitespace">    </span><span class="mi">945</span>     <span class="c1"># attributes &#39;engine&#39;, &#39;save&#39;, &#39;supported_extensions&#39; and &#39;write_cells&#39;</span>
-<span class="ne">--&gt; </span><span class="mi">946</span>     <span class="n">writer</span> <span class="o">=</span> <span class="n">ExcelWriter</span><span class="p">(</span>  <span class="c1"># type: ignore[abstract]</span>
-<span class="g g-Whitespace">    </span><span class="mi">947</span>         <span class="n">writer</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">948</span>         <span class="n">engine</span><span class="o">=</span><span class="n">engine</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">949</span>         <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">950</span>         <span class="n">engine_kwargs</span><span class="o">=</span><span class="n">engine_kwargs</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">951</span>     <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">952</span>     <span class="n">need_save</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="g g-Whitespace">    </span><span class="mi">954</span> <span class="k">try</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/pandas/io/excel/_openpyxl.py:57,</span> in <span class="ni">OpenpyxlWriter.__init__</span><span class="nt">(self, path, engine, date_format, datetime_format, mode, storage_options, if_sheet_exists, engine_kwargs, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">44</span> <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">45</span>     <span class="bp">self</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">46</span>     <span class="n">path</span><span class="p">:</span> <span class="n">FilePath</span> <span class="o">|</span> <span class="n">WriteExcelBuffer</span> <span class="o">|</span> <span class="n">ExcelWriter</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">55</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">56</span>     <span class="c1"># Use the openpyxl module as the Excel writer.</span>
-<span class="ne">---&gt; </span><span class="mi">57</span>     <span class="kn">from</span> <span class="nn">openpyxl.workbook</span> <span class="kn">import</span> <span class="n">Workbook</span>
-<span class="g g-Whitespace">     </span><span class="mi">59</span>     <span class="n">engine_kwargs</span> <span class="o">=</span> <span class="n">combine_kwargs</span><span class="p">(</span><span class="n">engine_kwargs</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">61</span>     <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">62</span>         <span class="n">path</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">63</span>         <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">66</span>         <span class="n">engine_kwargs</span><span class="o">=</span><span class="n">engine_kwargs</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">67</span>     <span class="p">)</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;openpyxl&#39;
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 </section>
@@ -993,8 +933,8 @@ X_test.shape = (100, 6)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2013.5833333,   35.4      ,  318.5292   ,    9.       ,
-         24.97071  ,  121.54069  ])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2012.75   ,    0.     ,  208.3905 ,    6.     ,   24.95618,
+        121.53844])
 </pre></div>
 </div>
 </div>
@@ -1057,7 +997,7 @@ X_test.shape = (42, 6)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MSE on training set = 82.41466453682675
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MSE on training set = 82.41466453682715
 </pre></div>
 </div>
 </div>
@@ -1072,7 +1012,7 @@ X_test.shape = (42, 6)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MSE on test set = 51.83750374286805
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MSE on test set = 51.83750374286778
 </pre></div>
 </div>
 </div>
@@ -1084,7 +1024,7 @@ X_test.shape = (42, 6)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/9b21bc80404a23a9122e976ffc80b45524fc374192e86d003404d105ab588bb7.png" src="../_images/9b21bc80404a23a9122e976ffc80b45524fc374192e86d003404d105ab588bb7.png" />
+<img alt="../_images/7498c6a9075de299fe9faab3faab00004e1342a445431bda2fc0a2949d2745dd.png" src="../_images/7498c6a9075de299fe9faab3faab00004e1342a445431bda2fc0a2949d2745dd.png" />
 </div>
 </div>
 </section>
@@ -1133,7 +1073,7 @@ X_test.shape = (42, 6)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>55.2204325346289
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>55.220432534628344
 </pre></div>
 </div>
 </div>
@@ -1145,7 +1085,7 @@ X_test.shape = (42, 6)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/eefd1c5abab3b5be2eef574470023bc74de15bcec22c1dce691741f36c7f4ff4.png" src="../_images/eefd1c5abab3b5be2eef574470023bc74de15bcec22c1dce691741f36c7f4ff4.png" />
+<img alt="../_images/62f21c2fef47e8d5e22e853cac42db4e01c69957effb1855d8fd40bb0da2bbec.png" src="../_images/62f21c2fef47e8d5e22e853cac42db4e01c69957effb1855d8fd40bb0da2bbec.png" />
 </div>
 </div>
 </section>
