@@ -18,6 +18,7 @@ dependencies = [
     "numpy",
     "matplotlib",
     "pandas",
+    "scikit-learn",
 ]
 
 [tool.versioningit.vcs]
