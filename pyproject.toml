@@ -17,6 +17,7 @@ dependencies = [
     "sphinx-autodoc-typehints",
     "numpy",
     "matplotlib",
+    "pandas",
 ]
 
 [tool.versioningit.vcs]
