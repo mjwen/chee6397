@@ -23,6 +23,8 @@ dependencies = [
     "rdkit",
     "matminer",
     "crystal-toolkit",
+    "dscribe",
+    "ase",
 ]
 
 [tool.versioningit.vcs]
