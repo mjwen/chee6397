@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,8 +38,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -64,6 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'lab/lab3-linear_models';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Lab 4: Descriptors for Molecules and Materials" href="lab4-descriptors.html" />
     <link rel="prev" title="Lab 2: A one-lecture intro to Python" href="lab2-Python_intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -75,6 +77,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -155,6 +166,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="lab1-example.html">Lab 1 examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lab2-Python_intro.html">Lab 2: A one-lecture intro to Python</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Lab 3: Data Processing &amp; Linear Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab4-descriptors.html">Lab 4: Descriptors for Molecules and Materials</a></li>
 </ul>
 
     </div>
@@ -327,10 +339,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -338,7 +350,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -703,7 +715,7 @@ Name: Y house price of unit area, Length: 414, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/29834d0912db348ef2db946f4e269b56a7dbfc09d963ad6cca7adf577ed778c8.png" src="../_images/29834d0912db348ef2db946f4e269b56a7dbfc09d963ad6cca7adf577ed778c8.png" />
+<img alt="../_images/42320ac94f7ca1b7baeea5444e6060b928af44bdf5e91dca2c131fa0fd241af9.png" src="../_images/42320ac94f7ca1b7baeea5444e6060b928af44bdf5e91dca2c131fa0fd241af9.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -713,7 +725,7 @@ Name: Y house price of unit area, Length: 414, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/654669c93ca04e81fc7fe4aaa7e9294779eae43739d8ab6d35545adf9a8962ac.png" src="../_images/654669c93ca04e81fc7fe4aaa7e9294779eae43739d8ab6d35545adf9a8962ac.png" />
+<img alt="../_images/654c6ce7239c565edbb636998e33f3e59678e96df9d22e6c7a9047d728030a61.png" src="../_images/654c6ce7239c565edbb636998e33f3e59678e96df9d22e6c7a9047d728030a61.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -734,7 +746,7 @@ Name: Y house price of unit area, Length: 414, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/75f36416c09f68ac820479c79b8d41ed4f5806c2c35886059e4f1b77bbf8188a.png" src="../_images/75f36416c09f68ac820479c79b8d41ed4f5806c2c35886059e4f1b77bbf8188a.png" />
+<img alt="../_images/4c8d0f5bc7ec5c39193e91f47a32c16e7433194a2ef51d1bacc75811a1281154.png" src="../_images/4c8d0f5bc7ec5c39193e91f47a32c16e7433194a2ef51d1bacc75811a1281154.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -744,7 +756,7 @@ Name: Y house price of unit area, Length: 414, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/c6c6ca3803e6de52493514eb853028b82a9a25db71913bebdf6e62e75905803d.png" src="../_images/c6c6ca3803e6de52493514eb853028b82a9a25db71913bebdf6e62e75905803d.png" />
+<img alt="../_images/9e00c9c1bbcb7e8914d6981218f36288e85f29ef71b6e64979087f207d46056f.png" src="../_images/9e00c9c1bbcb7e8914d6981218f36288e85f29ef71b6e64979087f207d46056f.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -756,7 +768,7 @@ Name: Y house price of unit area, Length: 414, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/4a460f674a589d7670507d99f09c5bbc466faccdfde2ac1d1bf5969e64ba8796.png" src="../_images/4a460f674a589d7670507d99f09c5bbc466faccdfde2ac1d1bf5969e64ba8796.png" />
+<img alt="../_images/fb62a7c7ea30278eef11707666308c353014f806ddc7c3ab6ef802fd5236315b.png" src="../_images/fb62a7c7ea30278eef11707666308c353014f806ddc7c3ab6ef802fd5236315b.png" />
 </div>
 </div>
 <section id="convert-to-other-formats">
@@ -933,8 +945,8 @@ X_test.shape = (100, 6)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2012.75   ,    0.     ,  208.3905 ,    6.     ,   24.95618,
-        121.53844])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2013.3333333,   25.6      , 4519.69     ,    0.       ,
+         24.94826  ,  121.49587  ])
 </pre></div>
 </div>
 </div>
@@ -1024,7 +1036,7 @@ X_test.shape = (42, 6)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/7498c6a9075de299fe9faab3faab00004e1342a445431bda2fc0a2949d2745dd.png" src="../_images/7498c6a9075de299fe9faab3faab00004e1342a445431bda2fc0a2949d2745dd.png" />
+<img alt="../_images/8f3e7d7acd582f391fb6793e0f1ec529b5066cdfb7e5f2982a859c7ae1b01905.png" src="../_images/8f3e7d7acd582f391fb6793e0f1ec529b5066cdfb7e5f2982a859c7ae1b01905.png" />
 </div>
 </div>
 </section>
@@ -1085,7 +1097,7 @@ X_test.shape = (42, 6)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/62f21c2fef47e8d5e22e853cac42db4e01c69957effb1855d8fd40bb0da2bbec.png" src="../_images/62f21c2fef47e8d5e22e853cac42db4e01c69957effb1855d8fd40bb0da2bbec.png" />
+<img alt="../_images/5f95968b8b7baf913349a9577caa27cedfd393538d9138a7f0c32784cde3022f.png" src="../_images/5f95968b8b7baf913349a9577caa27cedfd393538d9138a7f0c32784cde3022f.png" />
 </div>
 </div>
 </section>
@@ -1117,11 +1129,10 @@ X_test.shape = (42, 6)
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="lab2-Python_intro.html"
@@ -1132,10 +1143,16 @@ X_test.shape = (42, 6)
         <p class="prev-next-title">Lab 2: A one-lecture intro to Python</p>
       </div>
     </a>
-</div></div>
-  
+    <a class="right-next"
+       href="lab4-descriptors.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Lab 4: Descriptors for Molecules and Materials</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
-
                 </footer>
               
             </div>
@@ -1219,8 +1236,8 @@ By Mingjian Wen
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>
