@@ -20,6 +20,9 @@ dependencies = [
     "pandas",
     "scikit-learn",
     "openpyxl",
+    "rdkit",
+    "matminer",
+    "crystal-toolkit",
 ]
 
 [tool.versioningit.vcs]
