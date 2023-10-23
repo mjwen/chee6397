@@ -25,6 +25,7 @@ dependencies = [
     "crystal-toolkit",
     "dscribe",
     "ase",
+    "torch",
 ]
 
 [tool.versioningit.vcs]

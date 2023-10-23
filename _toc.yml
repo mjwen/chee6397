@@ -12,3 +12,4 @@ parts:
       - file: lab/lab2-Python_intro.ipynb
       - file: lab/lab3-linear_models.ipynb
       - file: lab/lab4-descriptors.ipynb
+      - file: lab/lab5-intro_pytorch.ipynb
