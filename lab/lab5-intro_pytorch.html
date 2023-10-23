@@ -760,7 +760,7 @@ We will only use the CPU version in this lab, so you can ignore the CUDA related
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">generate_data</span><span class="p">(</span><span class="n">N</span><span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">generate_data</span><span class="p">(</span><span class="n">N</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">num_in</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -794,22 +794,11 @@ We will only use the CPU version in this lab, so you can ignore the CUDA related
 <h3>Create a model with 10 hidden nodes<a class="headerlink" href="#create-a-model-with-10-hidden-nodes" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_hidden</span> <span class="o">=</span> <span class="mi">10</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_in</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">num_hidden</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="n">num_out</span>  <span class="o">=</span> <span class="mi">1</span>
 
 <span class="n">model</span> <span class="o">=</span> <span class="n">MyTwoLayerMLP</span><span class="p">(</span><span class="n">num_in</span><span class="p">,</span> <span class="n">num_hidden</span><span class="p">,</span> <span class="n">num_out</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">27</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">num_hidden</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">num_out</span>  <span class="o">=</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">model</span> <span class="o">=</span> <span class="n">MyTwoLayerMLP</span><span class="p">(</span><span class="n">num_in</span><span class="p">,</span> <span class="n">num_hidden</span><span class="p">,</span> <span class="n">num_out</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;num_in&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -893,7 +882,7 @@ We will only use the CPU version in this lab, so you can ignore the CUDA related
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;loss&#39;)
 </pre></div>
 </div>
-<img alt="../_images/02705634265efc535c08f01f45c91d0beb4b2f9a4caaf65991f4c8e0dbc9413e.png" src="../_images/02705634265efc535c08f01f45c91d0beb4b2f9a4caaf65991f4c8e0dbc9413e.png" />
+<img alt="../_images/f276019cccd2e321229705317b18346e8943d6be8906824fe8bdff9d6a6828f2.png" src="../_images/f276019cccd2e321229705317b18346e8943d6be8906824fe8bdff9d6a6828f2.png" />
 </div>
 </div>
 </section>
